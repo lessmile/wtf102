@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Sales\Model\Order">
+        <plugin name="order_and_product_webhook_plugin" type="Mgodev\Webhook\Plugin\OrderAndProductWebhookPlugin" />
+    </type>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="order_and_product_webhook_plugin" type="Mgodev\Webhook\Plugin\OrderAndProductWebhookPlugin" />
+    </type>
+    <preference for="Mgodev\Webhook\Api\ProductInterface" type="Mgodev\Webhook\Model\Product" />
+</config>
+
